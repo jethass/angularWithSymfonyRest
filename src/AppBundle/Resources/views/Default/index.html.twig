@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>LH Group</title>
+	<meta name="description" content="">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="fragment" content="!" />
+        <base href="/">  
+        
+        <!-- CSS -->
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+       
+        <!-- JS -->
+        <script src="{{ asset('js/plugins/angular.min.js') }}"></script>
+	<script src="{{ asset('js/plugins/angular-route.min.js') }}"></script>
+	<script src="{{ asset('js/plugins/angular-resource.min.js') }}"></script>
+	<script src="{{ asset('js/plugins/jquery-1.10.2.min.js') }}"></script>
+        
+        <!-- router JS -->
+        <script src="{{ asset('js/app.js') }}"></script>
+        
+        <!-- httpInterceptor -->
+        <script src="{{ asset('js/service/httpInterceptorService.js') }}"></script>
+        <script src="{{ asset('js/service/authService.js') }}"></script>
+        
+        <!-- Controller & Service JS -->
+        <script src="{{ asset('js/controller/homeController.js') }}"></script>
+        <script src="{{ asset('js/controller/loginController.js') }}"></script>
+        <script src="{{ asset('js/controller/newsController.js') }}"></script>
+        <script src="{{ asset('js/controller/contactController.js') }}"></script>
+        
+
+    </head>
+    <body ng-app="App" class="relative">
+
+        <div ng-show="loading">
+          <div class="loaderAjax"></div>
+        </div>
+
+        <div ng-view></div>
+
+    </body>
+</html>

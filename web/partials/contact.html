@@ -1,0 +1,58 @@
+<div ng-hide="loading">
+        <!--header start-->
+        <ng-include  src="'partials/header.html'" ></ng-include>
+        <!--header end-->
+
+        
+        <!--main content start-->
+        <div class="container">
+            <!-- wrapper start-->
+            <div class="wrapper">
+                <p class="p-bienvenu text-center" style="font-size: 1.5em; padding-bottom: 22px;width: 80%;margin: 0 auto;text-align: center;">
+                    
+                    <form name="myform" class="center" novalidate id="formAddSp">
+
+                            <input type="hidden" id="idSp" name="id" ng-model="sponsor.id"/>
+                            <div class="pad-bottom-10 relative">
+                                <input type="text" autocomplete="off" id="nomSp" class="form-input" name="nom" ng-model="sponsor.nom" placeholder="Nom"/>
+                            </div>
+
+                            <div class="pad-bottom-10 relative">
+                                <input type="email" autocomplete="off" id="emailSp" class="form-input" name="email"  ng-model-options="{ updateOn: 'keyup' }" ng-model="sponsor.email" placeholder="Email"  />
+                                <p class="email" ng-show="ErrorEmail">
+                                    <span class="required red">Le format de l'email est invalide.</span>
+                                </p>
+                            </div>
+
+                            <div ng-if="sponsorSavedSucess" class="pad-bottom-10 relative">
+                                <p>
+                                    <span class="msg-sucess-form">Contact ajouté avec succès!</span>
+                                </p>
+                            </div>
+                            <div ng-if="sponsorUpdatedSucess" class="pad-bottom-10 relative">
+                                <p>
+                                    <span class="msg-sucess-form">Contact mis à jour avec succès!</span>
+                                </p>
+                            </div>
+                            <div ng-if="sponsorSavedError" class="pad-bottom-10 relative">
+                                <p>
+                                    <span class="msg-error-form">Une erreur s'est produite pendant la sauvegarde, merci de réessayer.</span>
+                                </p>
+                            </div>
+                            <div class="desktop">
+                                <a style="text-align: center;display: inline-block !important;" class="type-bt-green-submit green bt-width dark mb-size" href="javascript:void(0)" ng-click="newSponsor()">Valider</a>
+                            </div>
+                    </form>
+                
+                </p>
+            </div>
+            <!-- wrapper end-->
+        </div>
+        <!--main content end-->  
+
+        <!--footer start-->
+        <ng-include  src="'partials/footer.html'" ></ng-include>
+        <!--footer end-->
+</div>
+
+

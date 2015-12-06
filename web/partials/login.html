@@ -1,0 +1,47 @@
+<div ng-hide="loading">
+    
+        <!--header start-->
+                <ng-include  src="'partials/header.html'" ></ng-include>
+        <!--header end-->
+
+        <div class="container">
+
+            <form class="form-horizontal"  name="loginForm" novalidate >
+                    <div class="form-group">
+                        <label for="login" class="col-sm-2 control-label">Login</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" ng-required="true" id="login" ng-model="form.login" name="login" placeholder="Login" value="">
+                        </div>
+                        <div class="col-sm-10">
+                            <span ng-show='loginForm.login.$dirty && loginForm.login.$error.required'>A login is required</span>
+                            <span ng-show='ErrorLogin'>A login bad</span>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" ng-required="true" id="password" ng-model="form.password" name="password" placeholder="Password" value="">
+                        </div>
+                        <div class="col-sm-10">
+                             <span ng-show='loginForm.password.$dirty && loginForm.password.$error.required'>A password is required</span>
+                             <span ng-show='ErrorPassword'>A password bad</span>
+                             
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <input id="submit" ng-click="login()" type="button" value="Connexion" class="btn btn-primary">
+                        </div>
+                    </div>
+            </form>
+        </div>
+
+        <!--footer start-->
+        <ng-include  src="'partials/footer.html'" ></ng-include>
+        <!--footer end-->
+    
+</div>
+
+

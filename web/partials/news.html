@@ -1,0 +1,75 @@
+<div ng-hide="loading">
+        <!--header start-->
+        <ng-include  src="'partials/header.html'" ></ng-include>
+        <!--header end-->
+
+        
+        <!--main content start-->
+        <div class="container">
+               <div ng-show="suppmessage" class="pad-bottom-10 ">
+                                {{suppmessage}}
+               </div>
+               <div class="thumbnail" ng-repeat="article in articles">
+                   <a href="javascript:void(0)"  ng-click="ModifierArticle(article.id)" class="icon-modifier">Modifier</a>
+                   <a href="javascript:void(0)"  ng-click="deleteArticle(article.id)" class="icon-delete">Supprimer</a>
+                   <div class="row-fluid">
+                        <div class="span2">
+                            <div class="thumbnail2">
+                                <img src="{{article.image}}">
+                            </div>
+                        </div>
+                        <div class="span8">
+                            <a href="javascript:void(0)" class="Title"> {{article.titre}} </a>
+                            <p>
+                               {{article.description}}
+                            </p>
+                            <p>
+                                <a href="javascript:void(0)" class="btn btn-info">Read More</a></p>
+                        </div>
+                    </div>
+                </div>
+            
+            <div>Ajouter un article :</div>
+            <div class="thumbnail">
+                    <form name="myform" class="center" novalidate id="formAddSp">
+                           
+                        
+                          <div class="form-group">
+                            <label>Titre :</label>
+                             <input type="hidden" name="id" ng-model="article.id" />
+                            <input class="form-control" type="text" autocomplete="off" name="titre" ng-model="article.titre" placeholder="titre"/>
+                          </div>
+                        
+                          <div class="form-group">
+                            <label>Description :</label>
+                              <textarea class="form-control" autocomplete="off"  name="description" ng-model="article.description" placeholder="description"  ></textarea>
+                          </div>
+                        
+                          <div class="form-group">
+                            <label>Image :</label>
+                             <input class="form-control" type="text" autocomplete="off" name="image" ng-model="article.image" placeholder="image"/>
+                          </div>
+
+                            <div ng-show="message" class="form-group relative">
+                                <p>
+                                    <span class="msg-sucess-form">{{message}}</span>
+                                </p>
+                            </div>
+                  
+                            <div>
+                                <a style="text-align: center;display: inline-block !important;" class="btn btn-info" href="javascript:void(0)" ng-click="newArticle()">
+                                    Ajouter
+                                </a>
+                            </div>
+                    </form>
+            </div>
+             
+        </div>
+        <!--main content end-->  
+
+        <!--footer start-->
+        <ng-include  src="'partials/footer.html'" ></ng-include>
+        <!--footer end-->
+</div>
+
+

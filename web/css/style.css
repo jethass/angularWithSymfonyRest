@@ -1,0 +1,72 @@
+body { padding-top: 135px; }
+#footer {
+  height: 60px;
+  color:#fff;
+  padding-top:10px;
+  width:100%;
+  text-align: center;
+  margin: 0 auto;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.5)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 );
+  background-color: #345370;
+}
+#menu, .navbar-default{
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.5)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 );
+  background-color: #345370;
+  color:#fff;
+}
+
+.loaderAjax{
+	background: url('../images/ajax-loader.gif') no-repeat left top;
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:50%;
+	margin-left:-50px;
+	top:350px;
+}
+.navbar-default .navbar-nav>li>a {
+    color:#fff;
+}
+.nav{
+    padding-top: 30px;
+    padding-left: 18px;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:active {
+    color:#777;
+}
+
+
+input.ng-dirty.ng-valid {
+border: 1px solid green;
+}
+input.ng-dirty.ng-invalid {
+border: 1px solid red;
+}
+.thumbnail{position: relative;}
+
+.icon-delete{position: absolute;top:25px;right:10px;}
+.icon-modifier{position: absolute;top:10px;right:10px;}
+
+.thumbnail2{ 
+    display: block;
+    padding: 9px;
+    min-height: 30px;
+}
+.thumbnail2 img{
+    width: 140px;
+    float: left;
+    padding-right: 20px;
+}
